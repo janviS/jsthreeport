@@ -141,6 +141,9 @@ export default class Resources extends EventEmitter {
       { name: "introMBase", source: "./models/intro/m/base.glb" },
       { name: "introMCollision", source: "./models/intro/m/collision.glb" },
 
+      { name: "introEBase", source: "./models/intro/e/base.glb" },
+      { name: "introECollision", source: "./models/intro/e/collision.glb" },
+
       { name: "introCreativeBase", source: "./models/intro/creative/base.glb" },
       {
         name: "introCreativeCollision",

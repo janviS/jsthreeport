@@ -22,7 +22,7 @@ export default class IntroSection {
     this.setStatic();
     this.setInstructions();
     this.setOtherInstructions();
-    this.setTitles();
+    // this.setTitles();
     this.setTiles();
     this.setDikes();
   }
@@ -124,8 +124,8 @@ export default class IntroSection {
     }
 
     this.otherInstructions = {};
-    this.otherInstructions.x = 16;
-    this.otherInstructions.y = -2;
+    this.otherInstructions.x = 0;
+    this.otherInstructions.y = -9.5;
 
     // Container
     this.otherInstructions.container = new THREE.Object3D();
@@ -138,7 +138,12 @@ export default class IntroSection {
     // Label
     this.otherInstructions.label = {};
 
-    this.otherInstructions.label.geometry = new THREE.PlaneGeometry(6, 6, 1, 1);
+    this.otherInstructions.label.geometry = new THREE.PlaneGeometry(
+      10,
+      4,
+      1,
+      1
+    );
 
     this.otherInstructions.label.texture =
       this.resources.items.introInstructionsOtherTexture;
@@ -279,6 +284,15 @@ export default class IntroSection {
       offset: new THREE.Vector3(5.85, 0, 0),
       rotation: new THREE.Euler(0, 0, 0),
       duplicated: true,
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 1.5,
+      soundName: "brick",
+    });
+    this.objects.add({
+      base: this.resources.items.introEBase.scene,
+      collision: this.resources.items.introECollision.scene,
+      offset: new THREE.Vector3(6.96, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
       shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
       mass: 1.5,
       soundName: "brick",
